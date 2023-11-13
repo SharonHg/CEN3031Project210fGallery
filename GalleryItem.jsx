@@ -16,12 +16,6 @@ const GalleryItem = (props) => {
         JSON.parse(localStorage.getItem(temp)) || 0
     );
 
-    /*const [viewCounts, setViewCounts] = useState(() => {
-      const storedViewCounts = JSON.parse(localStorage.getItem('viewCounts'));
-      return storedViewCounts || {};
-    });*/
-
-
     const showModal = () => {
         setVisible(true);
         setViewCounts((prevCount) => prevCount + 1);
@@ -44,7 +38,7 @@ const GalleryItem = (props) => {
 
     return (
         <>
-            <div className='galleryItem' tabIndex={0} onClick={() => { showModal() }}>
+            <div className='galleryItem' onClick={() => { showModal() }}>
                 <div className='header'><div>{title}</div></div>
                 <img style={{ backgroundColor: 'red' }} />
                 <div className='flex flex-row'>
@@ -65,6 +59,7 @@ const GalleryItem = (props) => {
                     title={title}
                     open={visible}
                     onCancel={handleCancel}
+					onOk={handleOk}
                     width='90vw'
                     maskClosable={false}
                     cancelText='Close'
