@@ -17,4 +17,8 @@ function Fork({ setExpand }) {
 		</Button>
 
 	);
+	
+	Fork.propTypes = {
+  setExpand: PropTypes.func.isRequired, 
+};
 } export default Fork;

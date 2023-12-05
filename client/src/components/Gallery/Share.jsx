@@ -74,5 +74,9 @@ function Share({ title }) {
 			</div>
 		</>
 	);
+	
+		Share.propTypes = {
+  title: PropTypes.string.isRequired, 
+};
 } export default Share;
 
