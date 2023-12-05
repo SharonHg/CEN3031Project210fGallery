@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 
-function Fork({ setExpand }) {
+function Fork() {
 	
 	//change the url to /workspaceGallery
 	const showModal = () => {
@@ -17,11 +17,7 @@ function Fork({ setExpand }) {
 		</Button>
 
 	);
-	
-}
+} 
 
-	Fork.propTypes = {
-  setExpand: PropTypes.func.isRequired, 
-};
 
- export default Fork;
+export default Fork;

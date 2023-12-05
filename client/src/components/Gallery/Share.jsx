@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import thumbnailsImage from './thumbnails.png';
 import { Modal, Button } from 'antd';
+import PropTypes from 'prop-types';
 
 
 function Share({ title }) {
@@ -61,7 +62,7 @@ function Share({ title }) {
 				>
 					<div className='flex flex-row'>
 						<div className='flex flex-column'>
-							<img src={thumbnailsImage} alt="thumbnail" style={{ height: '200px' }} />
+							<img src={thumbnailsImage} style={{ height: '200px' }} />
 						</div>
 						<div className='flex flex-column' style={{ 'margin-left': '30px' }}>
 							<h1 style={{ fontSize: '32px' }}>Code Sparks: {title}</h1>
@@ -75,7 +76,6 @@ function Share({ title }) {
 		</>
 	);
 } 
-
 	Share.propTypes = {
   title: PropTypes.string.isRequired, 
 };
