@@ -32,7 +32,6 @@ const GalleryItemExpanded = () => {
             setRender(notFoundMessage);
             return;
         }
-        //setGalleryObject(response.data);
         setTitleHeading(response.data.Title);
         localStorage.setItem('gallery-xml', (response.data.xml_text));
         await updateViewCount(response.data.id, response.data.view_count + 1);
